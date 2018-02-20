@@ -1,4 +1,5 @@
 package main.java;
+//merged
 
 // SortDemo.java     
 import java.util.*;   // for class StringTokenizer
@@ -10,7 +11,7 @@ public class SortDemoData  {
         public String algo;
 
         public SortDemoData(){
-            myArray = null;
+        	myArray = null;
         }
         
         
@@ -18,16 +19,15 @@ public class SortDemoData  {
         public void initializeArray(String string) throws NumberFormatException, 
         NoSuchElementException, NegativeArraySizeException{
 
-                StringTokenizer inputTokens = new StringTokenizer(string);
-                String[] result = string.split("\\s");
+	        	StringTokenizer inputTokens = new StringTokenizer(string);
+	        	String[] result = string.split("\\s");
 
                 String str = "";
                     
                 int n; // will be the length of myArray        
                 if (inputTokens.hasMoreTokens()) {
                         n = inputTokens.countTokens(); 
-                } 
-                else {
+                } else {
                         throw new NoSuchElementException();
                 }
 
@@ -55,15 +55,15 @@ public class SortDemoData  {
                         int count =0;
                         // read the n numbers into the array
                         for (int i = 0; i < n; i++) {
-                            
+                        	
 
                                 str = result[i];
                                 if(Arrays.asList(Arrays.copyOfRange(result, 0, i)).contains(str)){
-                                    count = count + 1;
+                                	count = count + 1;
                                 }
                                 else{
-                                    array[i-count] = new Item( 
-                                            Integer.valueOf(str).intValue());
+                                	array[i-count] = new Item( 
+                                	        Integer.valueOf(str).intValue());
                                 }
 
                                 
@@ -76,11 +76,11 @@ public class SortDemoData  {
         }
              
         /**
-         * All methods should have a Javadoc according to STYLE.
-         * @param choice: chosen sort algorithm, needs to be a number between 0 and 5. If the number is out of range 0 should be chosen
-         * The attribute algo should always contain the choosen algorithm as string
-         * @throws Exception as per typical main specifications
-         */
+    	 * All methods should have a Javadoc according to STYLE.
+    	 * @param choice: chosen sort algorithm, needs to be a number between 0 and 5. If the number is out of range 0 should be chosen
+    	 * The attribute algo should always contain the choosen algorithm as string
+    	 * @throws Exception as per typical main specifications
+    	 */
         public StringBuffer runAlgo(int choice) {     
                         Item[] copyOfMyArray = new Item[myArray.length];
                         System.arraycopy(
@@ -92,33 +92,33 @@ public class SortDemoData  {
                    
                         switch (choice) {
                         case 0 : { SortAlgos.bubbleSort(myArray);  
-                                    algo = "Bubble Sort";
+                        			algo = "Bubble Sort";
                                    break;
                                   }
                         case 1 : { SortAlgos.selectionSort(myArray); 
-                                    algo = "Selection Sort";
+                        			algo = "Selection Sort";
                                    break;
                                  }
                         case 2 : { SortAlgos.insertionSort(myArray); 
-                                    algo = "Insertion Sort";
+                        			algo = "Insertion Sort";
                                    break;
                                  }
                         case 3 : { SortAlgos.mergeSort(myArray);
-                                    algo = "Merge Sort";
+                        			algo = "Merge Sort";
                                    break;
                                  }
                         case 4 : { SortAlgos.quickSort(myArray); 
-                                    algo = "Quick Sort";
+                        			algo = "Quick Sort";
                                    break;
                                  }
                         case 5 : { SortAlgos.heapSort(myArray);     
-                                    algo = "Heap Sort";
+                        			algo = "Heap Sort";
                                    break;
                                  }
                         default: SortAlgos.bubbleSort(myArray);  
-                                    algo = "Bubble Sort";
-                                    break;
-                                } 
+			            			algo = "Bubble Sort";
+			                        break;
+                        		} 
                         
                         // output initial sequence of unsorted and sorted array 
                         int limit = Math.min(myArray.length, 1024);
@@ -134,8 +134,10 @@ public class SortDemoData  {
                                           + "\n");
                         }
                         outputBuf.append("\r");
-                                
+                        		
                return outputBuf;            
-        }               
+        }        		
 }
+
+
 
