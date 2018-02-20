@@ -27,7 +27,8 @@ class AlgoTest {
         assertTrue(data.myArray.length == copyOfMyArray.length);
     }
     
-    /**
+
+	/**
      * emptyArray checks that the method throws a NullPointer for a given null array
      */
     @Test
