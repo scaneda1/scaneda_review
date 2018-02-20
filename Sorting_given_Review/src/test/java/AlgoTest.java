@@ -27,19 +27,25 @@ class AlgoTest {
         assertTrue(data.myArray.length == copyOfMyArray.length);
     }
     
-    /**
+
+	/**
      * emptyArray checks that the method throws a NullPointer for a given null array
      */
     @Test
     public void emptyArray() {
-        assertThrows(NullPointerException.class,
-                ()->{
+        assertThrows (NullPointerException.class),
+                
                     Item[] myArray = null;
                     SortAlgos.bubbleSort(myArray);
-                });
+                
     }
 
-    /**
+    private void assertThrows(Class<NullPointerException> class1, Class<Item[]> class2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
      * correctSort checks that the array is sorted correctly at the end
      */
     @Test
