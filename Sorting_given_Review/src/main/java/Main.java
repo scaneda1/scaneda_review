@@ -21,8 +21,17 @@ final class Main {
 		String choice;
 		
 		if (args.length == 0) {
-			accStr = "20";
-			choice = "1";
+			//accStr = "20";
+			//choice = "1";
+			System.out.println("Enter your string of numbers: ");
+			accStr = br.readLine();
+			
+			System.out.println("Initial String: ");
+			System.out.println(accStr);
+			
+			System.out.println("Choose Algorithm: ");
+			choice = br.readLine();
+			
 			
 		}
 		else{
