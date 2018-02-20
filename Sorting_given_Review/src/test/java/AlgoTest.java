@@ -33,7 +33,7 @@ class AlgoTest {
     @Test
     public void emptyArray() {
         assertThrows (NullPointerException.class),
-                
+              //removed lambda  
                     Item[] myArray = null;
                     SortAlgos.bubbleSort(myArray);
                 
